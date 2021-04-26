@@ -1,0 +1,9 @@
+var document = require("document");
+
+var queryObj = {
+    query: 'temperature<numeric> is not null or temperature is not null',
+    fields: 'temperature, humidity, creationDate'
+};
+
+var resp = document.query(queryObj);
+return resp.result.documents;
